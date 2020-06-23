@@ -1,7 +1,11 @@
 import React from "react";
 
 const AddBtn = props => {
-  return <h1>this is the add btn</h1>;
+  return (
+    <button type="button" className="btn btn-primary" onClick={props.onAdd}>
+      Add
+    </button>
+  );
 };
 
 export default AddBtn;

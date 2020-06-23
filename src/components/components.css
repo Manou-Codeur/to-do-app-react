@@ -1,0 +1,29 @@
+.controls {
+  display: inline-flex;
+  margin: 20px 0;
+}
+
+.form-control,
+.btn {
+  margin: 5px;
+}
+
+.Item {
+  display: flex;
+  margin: 20px 0;
+}
+
+.filled {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.Items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selected {
+  text-decoration: line-through;
+}

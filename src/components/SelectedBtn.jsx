@@ -1,7 +1,11 @@
 import React from "react";
 
 const SelectedBtn = props => {
-  return <h1>this is the selected btn</h1>;
+  return (
+    <button type="button" className="btn btn-warning" onClick={props.onSelect1}>
+      Done
+    </button>
+  );
 };
 
 export default SelectedBtn;
