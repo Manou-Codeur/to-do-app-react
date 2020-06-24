@@ -1,9 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 import ContextApi from "../containers/ContextApi";
 
 const SelectedBtn = () => {
   const myContext = useContext(ContextApi);
+  useEffect(() => {
+    /*this is test*/
+  }, []);
 
   return (
     <button

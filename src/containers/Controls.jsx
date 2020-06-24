@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import AddBtn from "../components/AddBtn";
 import "../components/components.css";
 
 const Controls = () => {
+  useEffect(() => {
+    /*this is test*/
+  }, []);
+
   return (
     <div className="controls">
       <input
