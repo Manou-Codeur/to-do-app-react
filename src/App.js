@@ -9,6 +9,12 @@ class App extends Component {
     data: [],
   };
 
+  componentDidMount() {
+    document.addEventListener("keypress", e =>
+      e.keyCode === 13 ? this.handleAdd(e) : null
+    );
+  }
+
   handleAdd = e => {
     const input = e.target.parentNode.childNodes[0];
     const inputValue = input.value;
