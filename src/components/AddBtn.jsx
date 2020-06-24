@@ -1,21 +1,19 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 
 import ContextApi from "../containers/ContextApi";
 
-class AddBtn extends Component {
-  static contextType = ContextApi;
+const AddBtn = () => {
+  const myContext = useContext(ContextApi);
 
-  render() {
-    return (
-      <button
-        type="button"
-        className="btn btn-primary"
-        onClick={this.context.onHandleAdd}
-      >
-        Add
-      </button>
-    );
-  }
-}
+  return (
+    <button
+      type="button"
+      className="btn btn-primary"
+      onClick={myContext.onHandleAdd}
+    >
+      Add
+    </button>
+  );
+};
 
 export default AddBtn;
