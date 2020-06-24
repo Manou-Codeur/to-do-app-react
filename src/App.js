@@ -40,7 +40,7 @@ class App extends Component {
   handleDelete = e => {
     const dataClone = [...this.state.data];
     const id = e.target.parentNode.id;
-    const index = dataClone.findIndex(el => el.id === id);
+    const index = dataClone.findIndex(el => el.id === parseInt(id));
     dataClone.splice(index, 1);
     this.setState({ data: dataClone });
   };

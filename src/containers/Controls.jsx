@@ -3,7 +3,7 @@ import React from "react";
 import AddBtn from "../components/AddBtn";
 import "../components/components.css";
 
-const Controls = props => {
+const Controls = () => {
   return (
     <div className="controls">
       <input

@@ -1,21 +1,19 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 
 import ContextApi from "../containers/ContextApi";
 
-class RemoveBtn extends Component {
-  static contextType = ContextApi;
+const RemoveBtn = () => {
+  const myContext = useContext(ContextApi);
 
-  render() {
-    return (
-      <button
-        type="button"
-        className="btn btn-danger"
-        onClick={this.context.onHandleDelet}
-      >
-        Remove
-      </button>
-    );
-  }
-}
+  return (
+    <button
+      type="button"
+      className="btn btn-danger"
+      onClick={myContext.onHandleDelet}
+    >
+      Remove
+    </button>
+  );
+};
 
 export default RemoveBtn;
