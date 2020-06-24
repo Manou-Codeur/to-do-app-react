@@ -1,11 +1,21 @@
-import React from "react";
+import React, { Component } from "react";
 
-const AddBtn = props => {
-  return (
-    <button type="button" className="btn btn-primary" onClick={props.onAdd}>
-      Add
-    </button>
-  );
-};
+import ContextApi from "../containers/ContextApi";
+
+class AddBtn extends Component {
+  static contextType = ContextApi;
+
+  render() {
+    return (
+      <button
+        type="button"
+        className="btn btn-primary"
+        onClick={this.context.onHandleAdd}
+      >
+        Add
+      </button>
+    );
+  }
+}
 
 export default AddBtn;

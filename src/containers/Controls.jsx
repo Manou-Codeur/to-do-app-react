@@ -14,7 +14,7 @@ const Controls = props => {
         aria-describedby="emailHelp"
         id="myInput"
       />
-      <AddBtn onAdd={props.onAdd2} />
+      <AddBtn />
     </div>
   );
 };

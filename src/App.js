@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import Controls from "./containers/Controls";
 import Items from "./containers/Items";
-// import ContextApi from "./containers/ContextApi";
+import ContextApi from "./containers/ContextApi";
 
 class App extends Component {
   state = {
@@ -36,10 +36,17 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app">
-        <Controls onAdd2={this.handleAdd} />
-        <Items data={this.state.data} onDelete2={this.handleDelete} />
-      </div>
+      <ContextApi.Provider
+        value={{
+          onHandleAdd: this.handleAdd,
+          onHandleDelet: this.handleDelete,
+        }}
+      >
+        <div className="app">
+          <Controls />
+          <Items data={this.state.data} onDelete2={this.handleDelete} />
+        </div>
+      </ContextApi.Provider>
     );
   }
 }
