@@ -8,9 +8,8 @@ const Items = props => {
       {props.data.map(els => (
         <Item
           key={els.id}
-          id={els.id}
           itemData={els}
-          removeBtn2={() => props.onDelete2(els.id)}
+          // removeBtn2={() => props.onDelete2(els.id)}
         />
       ))}
     </div>

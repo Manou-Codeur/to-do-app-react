@@ -17,9 +17,9 @@ class Item extends Component {
 
   render() {
     return (
-      <div className="Item">
+      <div className="Item" id={this.props.itemData.id}>
         <p className={this.state.class}>{this.props.itemData.name}</p>
-        <RemoveBtn removeBtn={this.props.removeBtn2} />
+        <RemoveBtn />
         <SelectedBtn onSelect1={this.handleSelect} />
       </div>
     );

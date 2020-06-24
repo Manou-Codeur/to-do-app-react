@@ -27,8 +27,9 @@ class App extends Component {
     }
   };
 
-  handleDelete = id => {
+  handleDelete = e => {
     const dataClone = [...this.state.data];
+    const id = e.target.parentNode.id;
     const index = dataClone.findIndex(el => el.id === id);
     dataClone.splice(index, 1);
     this.setState({ data: dataClone });
@@ -44,7 +45,7 @@ class App extends Component {
       >
         <div className="app">
           <Controls />
-          <Items data={this.state.data} onDelete2={this.handleDelete} />
+          <Items data={this.state.data} />
         </div>
       </ContextApi.Provider>
     );

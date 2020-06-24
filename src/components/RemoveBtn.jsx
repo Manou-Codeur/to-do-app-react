@@ -1,11 +1,21 @@
-import React from "react";
+import React, { Component } from "react";
 
-const RemoveBtn = props => {
-  return (
-    <button type="button" className="btn btn-danger" onClick={props.removeBtn}>
-      Remove
-    </button>
-  );
-};
+import ContextApi from "../containers/ContextApi";
+
+class RemoveBtn extends Component {
+  static contextType = ContextApi;
+
+  render() {
+    return (
+      <button
+        type="button"
+        className="btn btn-danger"
+        onClick={this.context.onHandleDelet}
+      >
+        Remove
+      </button>
+    );
+  }
+}
 
 export default RemoveBtn;
