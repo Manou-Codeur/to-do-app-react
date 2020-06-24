@@ -1,8 +1,6 @@
 import React from "react";
 
 import AddBtn from "../components/AddBtn";
-// import Input from "../components/Input";
-
 import "../components/components.css";
 
 const Controls = props => {

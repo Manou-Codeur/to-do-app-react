@@ -19,6 +19,16 @@ class App extends Component {
     const input = e.target.parentNode.childNodes[0];
     const inputValue = input.value;
     const dataClone = [...this.state.data];
+
+    for (let els of dataClone) {
+      if (els.name === input.value) {
+        alert("This is present in the database, try another name!");
+        input.value = "";
+        input.focus();
+        return;
+      }
+    }
+
     if (input.value.trim() !== "") {
       dataClone.push({ name: inputValue, id: new Date().getMilliseconds() });
       this.setState({ data: dataClone });
