@@ -35,12 +35,19 @@ class App extends Component {
     this.setState({ data: dataClone });
   };
 
+  handleSelect = e => {
+    const el = e.target.parentNode.childNodes[0];
+    if (el.className.includes("selected")) el.className = "filled";
+    else el.className += " selected";
+  };
+
   render() {
     return (
       <ContextApi.Provider
         value={{
           onHandleAdd: this.handleAdd,
           onHandleDelet: this.handleDelete,
+          onHandleSelect: this.handleSelect,
         }}
       >
         <div className="app">
